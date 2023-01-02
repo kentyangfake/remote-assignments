@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    text-align: center;
+}
+
+header {
+    background-color: lightgray;
+}
+
+#welcome-banner{
+    background-color: lightsteelblue;
+}
+/* flex banner */
+#column div {
+    background-color: slategray;
+}
+
