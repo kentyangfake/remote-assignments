@@ -7,8 +7,6 @@ h1 {
 }
 
 header {
-    margin: 0;
-    padding: 0;
     background-color: lightgray;
 }
 
@@ -17,13 +15,11 @@ main{
 }
 
 .container{
-    width: 70%;
-    margin: 0px auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 16px;
 }
 
-ul{
-    margin:10px 5px 0px;
-}
 ul li{
     display:inline-block;
 }
@@ -40,9 +36,30 @@ h2{
 /* flex banner */
 #column div {
     background-color: slategray;
+    height: 20vh;
+    margin: 10px auto;
 }
 
-@media screen and (min-width: 1200px){}
-@media screen and (min-width: 800px) and (max-width:1199px){}
-@media screen and (min-width: 500px) and (max-width:799px){}
-@media screen and (max-width:499px){}
+
+/*Media Queries */
+
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width:1199px){
+    .container{
+        padding-left: 1em;
+        padding-right: 1em; 
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width:799px){
+    .container{
+        padding-left: 1em;
+        padding-right: 1em; 
+    }
+}
