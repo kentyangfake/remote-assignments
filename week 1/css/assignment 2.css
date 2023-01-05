@@ -72,10 +72,6 @@ a {
     text-decoration:none;
     color: black;
 }
-
-input[type=checkbox]:checked ~ .menu{
-    display: block;
-}
     
 .hamburger {
     display: block;
