@@ -6,11 +6,11 @@ header{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items:center;
     background-color: lightgray;
     height:50px;
-    padding-left: 1em;
-    padding-right: 1em;
-    align-items:center;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
 
 h1{
@@ -28,12 +28,16 @@ main{
 }
 
 #welcome-banner{
+    display:flex;
+    align-items: center;
+    justify-content:center;
     background-color: lightsteelblue;
-    height: 20vh;
+    height: 200px;
+    font-size: 2rem;
 }
 
-h2{
-    margin-top:0px;
+h3 {
+    font-size: 1.5rem;
 }
 
 /* flex banner */
@@ -48,12 +52,25 @@ h2{
     padding: 20px;
     margin: 10px;
 	background: slategray;
-    height: 300px;
+    height: 200px;
+    font-size: 1rem;
+}
+
+button{
+    border: none;
+    background-color: rgb(223, 239, 255);
+    font-size: 1rem;
+    padding:20px;
 }
 
 /*RESPONSIVE NAVBAR MENU*/
 .menu { 
     display:none;
+}
+
+a {
+    text-decoration:none;
+    color: black;
 }
 
 input[type=checkbox]:checked ~ .menu{
@@ -95,7 +112,7 @@ input[type=checkbox]:checked ~ .menu{
         flex-direction: row;
     }
     .menu li{
-        padding-left: 50px;
+        padding-left: 4em;
     }
 
     /* CHECKBOX HACK */
