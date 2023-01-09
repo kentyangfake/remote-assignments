@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+header{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    background-color: lightgray;
+    height:50px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+h1{
+    font-size: 20px;
+    margin-right: auto;
+}
+
+main{
+    text-align:center;
+}
+
+.container{
+    margin: 1em;
+    font-size: 16px;
+}
+
+#welcome-banner{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    background-color: lightsteelblue;
+    height: 200px;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* flex banner */
+.columns {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.columns div {
+    padding: 20px;
+    margin: 10px;
+	background: slategray;
+    height: 200px;
+    font-size: 1rem;
+}
+
+button{
+    border: none;
+    background-color: rgb(223, 239, 255);
+    font-size: 1rem;
+    padding:20px;
+}
+
+/*RESPONSIVE NAVBAR MENU*/
+.menu { 
+    display:none;
+}
+
+a {
+    text-decoration:none;
+    color: black;
+}
+    
+.hamburger {
+    display: block;
+}
+
+#checkbox_toggle{
+    display:none;
+}
+
+/*Media Queries */
+
+@media screen and (orientation:landscape),
+       screen and (min-width: 500px) and (max-width:799px),
+       screen and (min-width: 800px) and (max-width:1199px),
+       screen and (min-width: 1200px){
+
+    .columns {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    .columns div{
+        flex: 1 45%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width:1199px),
+       screen and (min-width: 1200px){
+    
+    .menu {
+        display:flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .menu li{
+        padding-left: 4em;
+    }
+
+    /* CHECKBOX HACK */
+    input[type=checkbox]{
+        display: none;
+        
+    } 
+        
+    /*HAMBURGER MENU*/
+    
+    .hamburger {
+        display: none;
+        font-size: 24px;
+        user-select: none;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+
+
