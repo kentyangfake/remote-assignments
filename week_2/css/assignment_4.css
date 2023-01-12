@@ -41,19 +41,22 @@ h3 {
 }
 
 /* flex banner */
-.columns {
+.columns,.columns-addColumns.show{
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
     width:100%;
 }
 
-.columns div {
+.columns div,.columns-addColumns.show div{
     padding: 20px;
     margin: 10px;
 	background: slategray;
     height: 200px;
     font-size: 1rem;
+}
+.columns-addColumns{
+    display:none;
 }
 
 button{
@@ -68,19 +71,40 @@ button{
     display:none;
 }
 
-.hamburger,
-.xmark{
+.menu.active { 
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+}
+.menu.active li{
+    padding:20px;
+
+}
+
+i.hamburger{
+    position:absolute;
+    right: 1em;
+    top: 1em;
     display: block;
     cursor: pointer;
 }
-
-.side-menu{
+i.hamburger.hide{
     display: none;
 }
 
-.hamburger .hide,
-.xmark{
-    display: none;
+i.xmark{
+    display:none;
+}
+i.xmark.show{
+    position:fixed;
+    right: 1em;
+    top: 1em;
+    display:block;
 }
 
 a {
@@ -97,13 +121,13 @@ a {
        screen and (min-width: 800px) and (max-width:1199px),
        screen and (min-width: 1200px){
 
-    .columns {
+    .columns,.columns-addColumns.show{
         display:flex;
         flex-direction: row;
         justify-content: center;
 
     }
-    .columns div{
+    .columns div,.columns-addColumns.show div{
         flex: 1 45%;
     }
 }
@@ -111,22 +135,26 @@ a {
 @media screen and (min-width: 800px) and (max-width:1199px),
        screen and (min-width: 1200px){
     
-    .menu {
+    .menu,
+    .menu.active{
         display:flex;
         justify-content: space-between;
         flex-direction: row;
+        position: relative;
+        background-color: transparent;
+        width:fit-content;
+        height:fit-content;
+
     }
     .menu li{
         padding-left: 4em;
     }
         
     /*HIDE HAMBURGER MENU*/
-    #hamburger,
-    #xmark,
-    .side-menu{
+    .toggleBox{
         display: none;
-        user-select: none;
     }
+
     
 }
 

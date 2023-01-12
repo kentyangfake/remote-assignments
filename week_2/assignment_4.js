@@ -1,9 +1,22 @@
-let hamburger = document.querySelector('.hamburger');
-let xmark = document.querySelector('.xmark');
-let sideMenu = document.querySelector('.side-menu');
+//responsive header menu
+let toggleBox = document.querySelector('.toggleBox');
+let hamburger = document.querySelector('i.hamburger');
+let xmark = document.querySelector('i.xmark');
+let menu = document.querySelector('ul.menu');
     
-hamburger.addEventListener('click', () => {
-    hamburger.classList.add("hide");
+toggleBox.addEventListener('click', () => {
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("hide");
+    xmark.classList.toggle("show");
+});
+
+//add columns with button
+let addColumns = document.querySelector('#btn-addColumns');
+let newColumns = document.querySelector('.columns-addColumns');
+
+addColumns.addEventListener('click', () => {
+    console.log('click');
+    newColumns.classList.add("show");
 });
 
 
