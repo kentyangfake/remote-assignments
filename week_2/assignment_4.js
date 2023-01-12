@@ -19,8 +19,7 @@ addColumns.addEventListener('click', () => {
     newColumns.classList.add("show");
 });
 
-
-
+//greeting banner
 const greetingBanner = document.getElementById("welcome-banner");
 
 greetingBanner.addEventListener('click', () => {
