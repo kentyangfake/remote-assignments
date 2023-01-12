@@ -68,18 +68,27 @@ button{
     display:none;
 }
 
+.hamburger,
+.xmark{
+    display: block;
+    cursor: pointer;
+}
+
+.side-menu{
+    display: none;
+}
+
+.hamburger .hide,
+.xmark{
+    display: none;
+}
+
 a {
     text-decoration:none;
     color: black;
 }
-    
-.hamburger {
-    display: block;
-}
 
-#checkbox_toggle{
-    display:none;
-}
+
 
 /*Media Queries */
 
@@ -110,21 +119,15 @@ a {
     .menu li{
         padding-left: 4em;
     }
-
-    /* CHECKBOX HACK */
-    input[type=checkbox]{
-        display: none;
         
-    } 
-        
-    /*HAMBURGER MENU*/
-    
-    .hamburger {
+    /*HIDE HAMBURGER MENU*/
+    #hamburger,
+    #xmark,
+    .side-menu{
         display: none;
-        font-size: 24px;
         user-select: none;
     }
-
+    
 }
 
 @media screen and (min-width: 1200px){

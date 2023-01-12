@@ -5,22 +5,29 @@
     <meta name='viewport' content='width-device-width, initial-scale=1'></meta>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/assignment_4.css">
-    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
   <body>
     <header>
       <h1>Website Title/Logo</h1>
-      
-        <!-- USING CHECKBOX HACK -->
-      <ul class="nav">
-        <input type="checkbox" id="checkbox_toggle" />
-        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <div class="nav">
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <div class="xmark"><i class="fas fa-times"></i></i></div>
         <ul class="menu">
           <li><a href="#">item 1</a></li>
           <li><a href="#">item 2</a></li>
           <li><a href="#">item 3</a></li>
           <li><a href="#">item 4</a></li>
         </ul>
-      </ul>  
+        <div class="side-menu">
+          <ul id="side-menu">
+            <li><a href="#">item 1</a></li>
+            <li><a href="#">item 2</a></li>
+            <li><a href="#">item 3</a></li>
+            <li><a href="#">item 4</a></li>
+          </ul>
+        </div>
+      </div>  
     </header>
     <main>
       <div id="welcome-banner"><h2>Welcome Message</h2></div>
