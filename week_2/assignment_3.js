@@ -4,23 +4,25 @@ function calculate(data) {
     for(let product of data.products){
         total += product.price;
     }
-    return total*discount; 
+    return total*(1-discount); 
 }
-    const discountedPrice = calculate({
+
+const discountedPrice = calculate({
     discount: 0.1,
     products: [
     {
-    name: "Product 1",
-    price: 100
+        name: "Product 1",
+        price: 100
     },
     {
-    name: "Product 2",
-    price: 700
+        name: "Product 2",
+        price: 700
     },
     {
-    name: "Product 3",
-    price: 250
+        name: "Product 3",
+        price: 250
     }
-    ]
-    });
-    console.log(discountedPrice)
+  ]
+});
+
+console.log(discountedPrice)
