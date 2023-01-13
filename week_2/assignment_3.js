@@ -1,5 +1,5 @@
 function calculate(data) {
-    let discount = data.discount;
+    const discount = data.discount;
     let total = 0;
     for(let product of data.products){
         total += product.price;
