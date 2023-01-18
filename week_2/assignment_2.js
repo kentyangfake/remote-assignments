@@ -1,7 +1,7 @@
 function calculate(args) {
-    let op = args.op;
-    let n1 = args.n1;
-    let n2 = args.n2;
+    const op = args.op;
+    const n1 = args.n1;
+    const n2 = args.n2;
     return (op === '+')? (n1 + n2) :
            (op === '-')? (n1 - n2) : 'Not supported';
 }

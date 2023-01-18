@@ -1,8 +1,8 @@
 //responsive header menu
-let toggleBox = document.querySelector('.toggleBox');
-let hamburger = document.querySelector('i.hamburger');
-let xmark = document.querySelector('i.xmark');
-let menu = document.querySelector('ul.menu');
+const toggleBox = document.querySelector('.toggleBox');
+const hamburger = document.querySelector('i.hamburger');
+const xmark = document.querySelector('i.xmark');
+const menu = document.querySelector('ul.menu');
     
 toggleBox.addEventListener('click', () => {
     menu.classList.toggle("active");
@@ -11,8 +11,8 @@ toggleBox.addEventListener('click', () => {
 });
 
 //add columns with button
-let addColumns = document.querySelector('#btn-addColumns');
-let newColumns = document.querySelector('.columns-addColumns');
+const addColumns = document.querySelector('#btn-addColumns');
+const newColumns = document.querySelector('.columns-addColumns');
 
 addColumns.addEventListener('click', () => {
     console.log('click');
