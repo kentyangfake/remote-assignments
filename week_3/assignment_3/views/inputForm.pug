@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+  head
+    title Your Web Page
+  body
+    if sum
+      h2 #{sum}
+    else
+      h2 get result of 1+2+....+ Number!
+      form(action='', method='post')
+        label Please enter a Number:
+          input(type='number', name='inputValue')
+        button(type='submit') Submit
