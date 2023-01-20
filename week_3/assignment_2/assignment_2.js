@@ -9,10 +9,9 @@ app.get('/getData', (req, res) => {
     }else if(isNaN(num)){
         res.send('Wrong Parameters');
     }else{
-    result = ((1 + Number(num)) *Number(num))/2;
+        result = ((1 + Number(num)) *Number(num))/2;
         res.send(`${result}`);
     }
-    
 });
 
 app.listen(3000, () => {
