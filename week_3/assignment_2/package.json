@@ -1,7 +1,7 @@
 {
-  "name": "assignment_1",
+  "name": "assignment_2",
   "version": "1.0.0",
-  "description": "assignment_1 my first web server",
+  "description": "Build Backend API for Front-End",
   "main": "assignment_2.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
