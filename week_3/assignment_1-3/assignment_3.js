@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-app.set('view engine', 'pug');
 
 app.use(express.urlencoded({ extended: false}));
 app.use(express.static('public'));
