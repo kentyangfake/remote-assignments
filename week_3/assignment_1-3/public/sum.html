@@ -4,8 +4,24 @@
     <title>Assignment 3</title>  
   </head>
   <body>
-    <h1>Let's add 1 to 10!</h1>
-    <button type="button" onclick="loadDoc()">Change Content</button>
-    <script src="sum.js"></script>
+    <h1>Let's sum: 1 to a number!</h1>
+    <div>
+      <input type='text' name='num'>
+      <button type="button" onclick="getData()">Submit</button>
+    </div>
+    <div id="content"></div>
+    
+    <script>
+      function getData(){
+        var req = new XMLHttpRequest();
+        var inputValue = document.querySelector('input[name="num"]').value;
+        req.open('get','getData?number='+inputValue);
+        req.onload = function(){
+          var content = document.querySelector('#content')
+          content.innerHTML=this.responseText;
+        };
+        req.send();
+      }
+    </script>
   </body>
 </html>

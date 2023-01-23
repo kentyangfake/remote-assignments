@@ -13,19 +13,13 @@ app.get('/getData', (req, res) => {
     let result;
     const num = req.query.number;
     if (num == null){
-        res.render('inputForm');
+        res.send('Lack of Parameter');
     }else if(isNaN(num)){
         res.send('Wrong Parameters');
     }else{
-        res.locals.sum = ((1 + Number(num)) *Number(num))/2;
-        res.render('inputForm');
+        result = ((1 + Number(num)) *Number(num))/2;
+        res.send(`${result}`);
     }
-});
-
-app.post('/getData',(req, res)=>{
-    let num = req.body.inputValue;
-    res.locals.sum = ((1 + Number(num)) *Number(num))/2;
-    res.render('inputForm');
 });
 
 app.listen(3000, () => {
