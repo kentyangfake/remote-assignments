@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8" />
-    	<meta name="viewport" content="width=device-width, initial-scale=1" />
-    	<title>Assignment 2</title>
-	</head>
-	<body>
-    	<div>Assignment 2</div>
-	</body>
-    <script>
-        function ajax(url) {
-            return fetch(url)
-                .then(res => res.json())
-                .catch(error => console.log('Something went wrong!',error));
-        }
-        function render(data) {
-            const html = data.map(product => `
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <div>Assignment 2</div>
+  </body>
+  <script>
+    function ajax(url) {
+      return fetch(url)
+        .then((res) => res.json())
+        .catch((error) => console.log("Something went wrong!", error));
+    }
+    function render(data) {
+      const html = data
+        .map(
+          (product) => `
             <h1>${product.description}</h1>
             <h2>${product.name}</h2>
-            <p>${product.price}</p>`)
-            .reduce((html,product) => html += `${product}`,'');
+            <p>${product.price}</p>`
+        )
+        .reduce((html, product) => (html += `${product}`), "");
 
-            document.body.innerHTML = html;
-        }
-        const url = "https://appworks-school.github.io/Remote-Assignment-Data/products";
+      document.body.innerHTML = html;
+    }
+    const url =
+      "https://appworks-school.github.io/Remote-Assignment-Data/products";
 
-        ajax(url).then((data) => {
-            render(data);
-        });
-	</script>
+    ajax(url).then((data) => {
+      render(data);
+    });
+  </script>
 </html>
