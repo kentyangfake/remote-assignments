@@ -95,6 +95,16 @@ const Li = styled.li`
     padding-left: 4em;
     padding:20px;
 `
+const MakeMenu = () => {
+  const menuList = [
+    "item 1",
+    "item 2",
+    "item 3",
+    "item 4",
+  ];
+
+  return menuList.map(item => <Li>{ item }</Li>);
+}
 
 const Mobilemenu = (props) => {
     if(props.toggled === false){
@@ -102,10 +112,7 @@ const Mobilemenu = (props) => {
     } else {
         return (
             <MobileMenu>
-                <Li>item 1</Li>
-                <Li>item 2</Li>
-                <Li>item 3</Li>
-                <Li>item 4</Li>
+              <MakeMenu />
             </MobileMenu>
         );
     }
@@ -118,10 +125,7 @@ const Navbar = () => {
     <Header>
         <H1>Website Title/Logo</H1>
         <Menu>
-            <Li>item 1</Li>
-            <Li>item 2</Li>
-            <Li>item 3</Li>
-            <Li>item 4</Li>
+          <MakeMenu />
         </Menu>
         <Mobilemenu toggled={isOpen}/>
         <HamburgerDiv onClick={() =>setOpen(current => !current)}>
@@ -172,36 +176,38 @@ const Button = styled.button`
   font-size: 1rem;
   padding:20px;
 `
+const MakeContent = () => {
+  const columnList = [
+    "Content Box 1",
+    "Content Box 2",
+    "Content Box 3",
+    "Content Box 4",
+  ];
+
+  return(
+    <Columns>
+      {columnList.map(col => <Column>{ col }</Column> )}
+    </Columns>
+  )
+}
 
 const AddColumns = (props) => {
-  if(props.Add){
-    return(
-      <Columns>
-        <Column>Content Box 1</Column>
-        <Column>Content Box 2</Column>
-        <Column>Content Box 3</Column>
-        <Column>Content Box 4</Column>
-      </Columns>
-    );
+  if(props.add){
+    return <MakeContent />;
   } else {
     return('');
   }
 }
 
 const Content = () => {
-  const [Add, setAddColumns] = React.useState(false);
+  const [add, setAddColumns] = React.useState(false);
   
   return(
     <Container>
         <h3>Section title</h3>
-        <Columns>
-          <Column>Content Box 1</Column>
-          <Column>Content Box 2</Column>
-          <Column>Content Box 3</Column>
-          <Column>Content Box 4</Column>
-        </Columns>
+        <MakeContent />
         <Button onClick={() => setAddColumns(true)}>Call to Action</Button>
-        <AddColumns Add={Add}/>
+        <AddColumns add={add}/>
     </Container>
   );
 }
